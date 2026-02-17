@@ -1,0 +1,708 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Wadie Parfums - عطور راقية</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- الشريط العلوي المضيء (نص أبيض - خلفية سوداء) -->
+        <div class="glowing-header">
+            <div class="header-content">
+                <span class="header-text">WADIE PARFUMS</span>
+                <div class="glow-effect"></div>
+            </div>
+        </div>
+
+        <!-- الصورة الرئيسية -->
+        <div class="hero-image">
+            <img src="S2.jpg" alt="Wadie Parfums" class="full-screen-img">
+          
+        </div>
+
+        <a href="#" class="order-btn">توصيل مجاني لجميع المدن</a>
+     
+
+
+        <!-- عرض السعر -->
+        <div class="price-tag">
+            <div class="price-box">
+                <span class="price-label">پــاك   
+                3 عطـور فـقط</span>
+                <span class="price-value">130 درهم</span>
+            </div>
+        </div>
+        
+        
+        
+
+        <!-- صورة إضافية في منتصف الشاشة -->
+        <div class="middle-image">
+            <img src="S1.png" alt="عطور فاخرة" class="center-img">
+         
+        </div>
+
+        <!-- نموذج الطلب -->
+        <div class="order-panel">
+            <h2>اطلب الپاك الخاص بك</h2>
+            
+            <!-- اختيار الفئة -->
+            <div class="gender-box">
+                <button class="gender-btn active" data-gender="men">👨 رجالي</button>
+                <button class="gender-btn" data-gender="women">👩 نسائي</button>
+            </div>
+
+            <form id="perfumeForm">
+                <!-- الاسم الكامل (خانة جديدة) -->
+                <div class="form-group">
+                    <label>الاسم الكامل:</label>
+                    <input type="text" id="fullname" placeholder="أدخل اسمك الكامل" required>
+                </div>
+
+                <!-- 3 خانات للعطور -->
+                <div class="form-group">
+                    <label>العطر الأول:</label>
+                    <select id="perfume1" class="perfume-select" required>
+                        <option value="">-- اختر العطر --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>العطر الثاني:</label>
+                    <select id="perfume2" class="perfume-select" required>
+                        <option value="">-- اختر العطر --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>العطر الثالث:</label>
+                    <select id="perfume3" class="perfume-select" required>
+                        <option value="">-- اختر العطر --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>المدينة:</label>
+                    <input type="text" id="city" placeholder="أدخل اسم المدينة" required>
+                </div>
+
+                <div class="form-group">
+                    <label>العنوان:</label>
+                    <input type="text" id="address" placeholder="أدخل العنوان بالتفصيل" required>
+                </div>
+
+                <div class="form-group">
+                    <label>رقم الهاتف:</label>
+                    <input type="tel" id="phone" placeholder="06xxxxxxxx" required>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fab fa-whatsapp"></i> إرسال عبر واتساب
+                </button>
+            </form>
+        </div>
+        
+          <a href="#" class="order-btn">توصيل مجاني لجميع المدن</a>
+
+        <!-- قسم المميزات (تم التعديل) -->
+        <div class="features">
+            <h3>مميزات WADIE PARFUMS</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-gem"></i>
+                    <span>أجود العطور</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <span>توصيل سريع</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-medal"></i>
+                    <span>منتجات أصلية</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ضمان الجودة</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- زر الواتساب -->
+    <a href="https://wa.me/212702891064" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ربط ملف JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+
+    /* صورة + طبقة سوداء شفافة */
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("S2.jpg") no-repeat center center / cover;
+
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* الشريط العلوي المضيء (نص أبيض - خلفية سوداء) */
+.glowing-header {
+    width: 100%;
+    background: #000000;
+    padding: 18px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid black;
+}
+
+.header-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.header-text {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255,215,0,0.5);
+    letter-spacing: 2px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.glow-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    animation: shine 3s infinite;
+    z-index: 1;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255,215,0,0.5); }
+    50% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFA500, 0 0 40px rgba(255,215,0,0.7); }
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* الصورة الرئيسية */
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    max-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+.image-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #e4e4e4;
+    animation: fadeInUp 1s ease;
+}
+
+.overlay-text {
+    color: #e0a65d;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* توصيل مجاني */
+.free-delivery {
+    background: #e9ecef;
+    margin: 25px 20px;
+    padding: 15px 15px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000000;
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.free-delivery i {
+    font-size: 1.8rem;
+    color: #000000;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* الصورة في منتصف الشاشة */
+.middle-image {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    height: 200px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+}
+
+.center-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.middle-image:hover .center-img {
+    transform: scale(1.1);
+}
+
+.middle-image-text {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 0 #000;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding: 20px 0 10px;
+}
+
+
+
+/* زر الطلب */
+.order-btn{
+    display:block;
+    width:100%;              /* يعمر الشاشة */
+    padding:20px 0;
+    background:#e4e4e4;
+    color: black ;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    
+    text-align:center;
+    animation: shake 1s infinite;
+    transition:0.3s;
+}
+
+/* حركة الهز */
+@keyframes shake{
+    0%{ transform: translateX(0); }
+    25%{ transform: translateX(-2px); }
+    50%{ transform: translateX(4px); }
+    75%{ transform: translateX(-2px); }
+    100%{ transform: translateX(0); }
+}
+
+
+/* عرض السعر */
+.price-tag {
+    margin: 20px;
+}
+
+.price-box {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 6px 0 #000000;
+}
+
+.price-label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.price-value {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* نموذج الطلب */
+.order-panel {
+    background: #ffffff;
+    margin: 20px;
+    padding: 25px 20px;
+    border-radius: 40px;
+    border: 2px solid black;
+    box-shadow: 0 8px 0 #000000;
+}
+
+.order-panel h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gender-box {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.gender-btn {
+    flex: 1;
+    background: #e9ecef;
+    border: none;
+    padding: 12px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 0 #adb5bd;
+    transition: 0.2s;
+}
+
+.gender-btn.active {
+    background: #FFD700;
+    color: #000000;
+    border-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.perfume-select, .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid black;
+    border-radius: 40px;
+    font-size: 1rem;
+    background: #ffffff;
+    outline: none;
+    transition: 0.2s;
+}
+
+.perfume-select:focus, .form-group input:focus {
+    border-color: #000;
+
+}
+
+.submit-btn {
+    width: 100%;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    border-bottom: 4px solid #128C7E;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    border-bottom-width: 6px;
+}
+
+
+/* قسم المميزات (تم التعديل) */
+.features {
+    margin: 30px 20px 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 40px;
+    border: 2px solid white ;
+    box-shadow: 0 6px 0 #000;
+}
+
+.features h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.feature-item {
+    background: white;
+    padding: 12px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: #000000;
+    border: 2px solid white ;
+    box-shadow: 0 4px 0 #000;
+}
+
+.feature-item i {
+    font-size: 1.8rem;
+    color: #000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+/* زر الواتساب */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background:#90ff55;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    
+    transition: 0.3s;
+    z-index: 999;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+
+<script>// قوائم العطور
+const perfumes = {
+    men: [
+        "souvage",
+        "bleu chanel",
+        "le male elexer",
+        "You",
+        "One million "
+    ],
+    women: [
+        "Coco chanel ",
+        " Kayali",
+        " interdi",
+        "Marchmilo"
+    ]
+};
+
+// العناصر
+const genderBtns = document.querySelectorAll('.gender-btn');
+const fullname = document.getElementById('fullname');
+const perfume1 = document.getElementById('perfume1');
+const perfume2 = document.getElementById('perfume2');
+const perfume3 = document.getElementById('perfume3');
+const form = document.getElementById('perfumeForm');
+const city = document.getElementById('city');
+const address = document.getElementById('address');
+const phone = document.getElementById('phone');
+
+let currentGender = 'men';
+
+// تحديث القوائم
+function updatePerfumeLists(gender) {
+    const selects = [perfume1, perfume2, perfume3];
+    
+    selects.forEach(select => {
+        select.innerHTML = '<option value="">-- اختر العطر --</option>';
+        perfumes[gender].forEach(perfume => {
+            const option = document.createElement('option');
+            option.value = perfume;
+            option.textContent = perfume;
+            select.appendChild(option);
+        });
+    });
+}
+
+// تبديل الفئة
+genderBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        genderBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentGender = this.dataset.gender;
+        updatePerfumeLists(currentGender);
+    });
+});
+
+// منع التكرار
+function checkDuplicates() {
+    const p1 = perfume1.value;
+    const p2 = perfume2.value;
+    const p3 = perfume3.value;
+    
+    if (p1 && p1 === p2) {
+        alert('لا يمكن اختيار نفس العطر مرتين');
+        perfume2.value = '';
+        return false;
+    }
+    if (p1 && p1 === p3) {
+        alert('لا يمكن اختيار نفس العطر مرتين');
+        perfume3.value = '';
+        return false;
+    }
+    if (p2 && p2 === p3) {
+        alert('لا يمكن اختيار نفس العطر مرتين');
+        perfume3.value = '';
+        return false;
+    }
+    return true;
+}
+
+perfume1.addEventListener('change', checkDuplicates);
+perfume2.addEventListener('change', checkDuplicates);
+perfume3.addEventListener('change', checkDuplicates);
+
+// إرسال النموذج
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    if (!fullname.value) {
+        alert('الرجاء إدخال الاسم الكامل');
+        fullname.focus();
+        return;
+    }
+    
+    if (!perfume1.value || !perfume2.value || !perfume3.value) {
+        alert('الرجاء اختيار العطور الثلاثة');
+        return;
+    }
+    
+    if (!checkDuplicates()) {
+        return;
+    }
+    
+    if (!city.value || !address.value || !phone.value) {
+        alert('الرجاء ملء جميع الحقول');
+        return;
+    }
+    
+    const message = `🛍️ طلب باك عطور WADIE PARFUMS
+👤 العميل: ${fullname.value}
+👤 الفئة: ${currentGender === 'men' ? 'رجالي' : 'نسائي'}
+💫 السعر: 130 درهم
+
+✨ العطور المختارة:
+1- ${perfume1.value}
+2- ${perfume2.value}
+3- ${perfume3.value}
+
+📍 معلومات التوصيل:
+المدينة: ${city.value}
+العنوان: ${address.value}
+الهاتف: ${phone.value}
+
+شكراً لثقتكم ♥️`;
+    
+    const whatsappUrl = `https://wa.me/212702891064?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+});
+
+// التهيئة
+updatePerfumeLists('men');
+
+// تأثيرات حركية للمميزات
+document.querySelectorAll('.feature-item').forEach((item, i) => {
+    item.style.animation = `fadeInUp 0.5s ease ${i * 0.1}s both`;
+});
+
+console.log('✨ WADIE PARFUMS - نسخة محدثة ✨');</script>
